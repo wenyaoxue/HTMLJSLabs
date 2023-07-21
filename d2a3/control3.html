@@ -1,0 +1,14 @@
+<script>
+    function checkPass(seca, secb, secc) {
+        document.write("scoring " + seca + "/50, " + secb + "/30, " + secc + "/20...<br>")
+        if (seca >= 25 && secb >= 15 && secc >= 10 && (seca+secb+secc) >= 65)
+            document.write("pass")
+        else
+            document.write("fail")
+        document.write("<br>")
+    }
+    checkPass(25, 15, 10)
+    checkPass(50, 15, 0)
+    checkPass(40, 30, 8)
+    checkPass(40, 30, 12)
+</script>

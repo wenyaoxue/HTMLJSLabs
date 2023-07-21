@@ -1,0 +1,23 @@
+<script>
+    function findMax(num1, num2, num3) {
+        document.write("the largest of the three numbers: " + num1 + ", " + num2 + ", and " +num3+" is ")
+        if (num1 >= num2 && num1 >= num3)
+            document.write(num1)
+        else if (num2 >= num1 && num2 >= num3)
+            document.write(num2)
+        else
+            document.write(num3)
+        document.write("<br>")
+    }
+
+    findMax(0,0,0)
+    findMax(0,0,1)
+    findMax(0,1,0)
+    findMax(0,1,1)
+    findMax(1,0,0)
+    findMax(1,0,1)
+    findMax(1,1,0)
+    findMax(1,1,1)
+    findMax(1,2,3)
+
+</script>

@@ -1,0 +1,23 @@
+<script>
+    function divisible(num, div) {
+        return num % div == 0
+    }
+    function check(num) {
+        var div5 = divisible(num, 5), div6 = divisible(num, 6)
+        document.write(num + " is ")
+        if (div5 && div6)
+            document.write("divisible by both 5 and 6")
+        else if (divisible(num, 5))
+            document.write("divisible by 5 and not 6")
+        else if (divisible(num, 6))
+            document.write("divisible by 6 and not 5")
+        else 
+            document.write("divisible by neither 5 nor 6")
+        document.write("<br>")
+    }
+    document.write("JavaScript Control demo<br>")
+    check(30)
+    check(20)
+    check(18)
+    check(16)
+</script>

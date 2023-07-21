@@ -1,0 +1,12 @@
+<script>
+    function pad(num, n) {
+        return String(num).padStart(n, '0');
+    }
+    d = new Date()
+    year = d.getFullYear()
+    month = d.getMonth()+1
+    date = d.getDate()
+    document.write(pad(date,2)+"-"+pad(month,2)+"-"+year+"<br>")
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    document.write(pad(date,2)+"-"+months[month-1]+"-"+year+"<br>")
+</script>

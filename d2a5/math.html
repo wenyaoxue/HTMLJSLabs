@@ -1,0 +1,23 @@
+<script>
+    function getNum() {
+        return Math.round(Math.random()*9+1)
+    }
+    function getWord(n) {
+        switch(n) {
+            case 1: return "one"
+            case 2: return "two"
+            case 3: return "three"
+            case 4: return "four"
+            case 5: return "five"
+            case 6: return "six"
+            case 7: return "seven"
+            case 8: return "eight"
+            case 9: return "nine"
+            case 10: return "ten"
+        } 
+    }
+    for (let i = 0; i < 100; i++) {
+        let n = getNum()
+        document.write(n + " " + getWord(n)+"<br>")
+    }
+</script>

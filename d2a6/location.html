@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script language="JavaScript">
+            function fun() {
+                document.write("PROTOCOL"+location.protocol + ", HOSTNAME" + location.hostname)
+                //basically a link
+                // location.href="status.html";
+                location.replace("status.html")
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Location Demo</h3>
+        <input type="button" value="change" onclick="fun()">
+    </body>
+</html>

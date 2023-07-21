@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Main Window</title>
+        <script language="JavaScript">
+            function openNew() {
+                // newwin = window.open("newwin.html", "newone")
+                newwin = window.open("newwin.html", "newone", "width=300;height=400;toolbar=no")
+                //doesn't seem to do anything different in chrome
+
+            }
+            function closeWin() {
+                newwin.close()
+            }
+        </script>
+    </head>
+    <body>
+        <font color="red" size="5">Main Window</font>
+        <input type="button" value="open" onclick="openNew()">
+        <input type="button" value="close" onclick="closeWin()">
+    </body>
+</html>

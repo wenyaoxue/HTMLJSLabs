@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <h1>Form Demo</h1>
+        <!-- <form name="frm1" action="actionpage.html" method="get"> -->
+        <form name="frm1" action="actionpage.html" method="post">
+            <input type="text" name="txt1" value="Asreet"><br>
+            <!-- button cannot submit the form to the server unless and until you incorporate client side scripting. use the submit -->
+            <!-- <input type="button" value="submit"> -->
+            <!-- below works with button -->
+            <input type="button" value="submit" onclick="document.frm1.submit()">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<script>
+    function ex1(str, char) {
+        return 
+    }
+    function checkEmail(email) {
+        if (email.indexOf("@") > -1 && email.indexOf("@") == email.lastIndexOf("@") && email.indexOf(".") > -1)
+            document.write(email + " has exactly 1 @ and at least 1 .<br>")
+        else
+            document.write(email + " is invalid<br>")
+    }
+    checkEmail("jack@yahoo.com")
+    checkEmail("yahoo.com")
+    checkEmail("c.w@gcom")
+    checkEmail("@.")
+    checkEmail("a@b@c.com")
+</script>

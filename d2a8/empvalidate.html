@@ -1,0 +1,56 @@
+<form name="form" onsubmit="return validateEmpDetails()" action="display.html">
+    <div id="errno"></div>
+    Employee Number <input type="text" name="empno"><br>
+    <div id="errnm"></div>
+    Employee Name <input type="text" name="empnm"><br>
+    <div id="errdt"></div>
+    Date of Joining (dd-mon-yyyy) <input type="text" name="empdt"><br>
+    <input type="Submit" value="Submit">
+    <!-- <input type="button" onclick="validateEmpDetails()" value="Submit"> -->
+</form>
+<script src="dateValidation.js"></script>
+<script>
+    function isEmpty(field) {
+        if (field.value.length==0)
+            return 0;
+        return 1
+    }
+    function onlySpaces(field) {
+        if (field.value.trim().length==0)
+            return 0;
+        return 1;
+    }
+    function onlyDigits(field) {
+        for (let i = 0; i < field.value.length; i++)
+            if (isNaN(field.value[i]) || field.value[i]==' ')
+                return 1;
+        return 0;
+    }
+    function onlyAlphabets(field) {
+        for (let i = 0; i < field.value.length; i++)
+            if (field.value[i].toLowerCase() == field.value[i].toUpperCase())
+                return 1;
+        return 0;
+    }
+    function validateEmpDetail(field, fieldnm, funcs, funcnms, err) {
+        for (let i = 0; i < funcs.length; i++)
+            if (funcs[i](field) == 0) {
+                err.innerHTML = fieldnm + " cannot be " + funcnms[i]
+                return false
+            }
+        err.innerHTML = fieldnm + " all good"
+        return true
+    }
+    function validateEmpDetails() {
+        noVal = validateEmpDetail(document.form.empno, "Employee Number", 
+            [isEmpty, onlySpaces, onlyDigits], ["empty", "only spaces", "only digits"], 
+            document.getElementById("errno"))
+        nmVal = validateEmpDetail(document.form.empnm, "Employee name",
+            [isEmpty, onlySpaces, onlyAlphabets], ["empty", "only spaces", "only alphabets"],
+            document.getElementById("errnm"))
+        dtVal = validateEmpDetail(document.form.empdt, "Employee date",
+            [isEmpty, onlySpaces, dateValidate], ["empty", "only spaces", "in an incorrect format"],
+            document.getElementById("errdt"))
+        return noVal && nmVal && dtVal
+    }
+</script>

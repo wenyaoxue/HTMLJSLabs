@@ -1,0 +1,34 @@
+<style>
+    table, td, th {
+      border:1px solid black;
+    }
+    td {
+        width:30px;
+    }
+</style>
+<body>
+    <form name="multtab">
+        <table>
+            <tr><th>X</th><th>Y</th><th>X*Y</th></tr>
+            <tr><td>1</td><td>9</td><td><input name="p1"></td></tr>
+            <tr><td>2</td><td>9</td><td><input name="p2"></td></tr>
+            <tr><td>3</td><td>9</td><td><input name="p3"></td></tr>
+            <tr><td>4</td><td>9</td><td><input name="p4"></td></tr>
+            <tr><td>5</td><td>9</td><td><input name="p5"></td></tr>
+            <tr><td>6</td><td>9</td><td><input name="p6"></td></tr>
+            <tr><td>7</td><td>9</td><td><input name="p7"></td></tr>
+            <tr><td>8</td><td>9</td><td><input name="p8"></td></tr>
+            <tr><td>9</td><td>9</td><td><input name="p9"></td></tr>
+            <tr><td>10</td><td>9</td><td><input name="p10"></td></tr>
+        </table>
+    </form>
+</body>
+<script>
+    function printTable(y) {
+        for (let x = 1; x <= 10; x++) {
+            document.multtab["p"+x].value=x*9
+        }
+        document.write("</table>")
+    }
+    printTable(9)
+</script>

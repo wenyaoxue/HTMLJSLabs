@@ -1,0 +1,51 @@
+<h1>Stop Watch (a little inaccurate, + not checking for double clicks)</h1>
+<div style="border:1px solid black; width:100px; margin-bottom:10px;">
+    <span id="min">00</span>:
+    <span id="sec">00</span>.
+    <span id="ms">000</span>
+</div>
+<button id="sw" onclick="start()">Start</button> <button onclick="stop()">Stop</button>
+<!-- <br><button onclick="add900()">add 950</button> -->
+
+<script>
+    let sw;
+    const min =  document.getElementById("min")
+    const sec =  document.getElementById("sec")
+    const ms =  document.getElementById("ms")
+
+    function add900() {
+        
+            ms.innerHTML = String(parseInt(ms.innerHTML)+980).padStart(3, '0');
+    }
+    function add1Ms() {
+        newms = parseInt(ms.innerHTML)+1
+        if (newms < 1000)
+            ms.innerHTML = String(newms).padStart(3, '0');
+        else {
+            newms = 0
+            news = parseInt(sec.innerHTML)+1
+            if (news < 60) {
+                sec.innerHTML = String(news).padStart(2, '0');
+                ms.innerHTML = String(newms).padStart(2, '0');
+            } else {
+                news = 0
+                newm = parseInt(min.innerHTML)+1
+                min.innerHTML = String(newm).padStart(2, '0');
+                sec.innerHTML = String(news).padStart(2, '0');
+                ms.innerHTML = String(newms).padStart(2, '0');
+
+            }
+
+        }
+
+        sw = setTimeout(add1Ms, 1)
+    }
+
+    function start() {
+        sw = setTimeout(add1Ms, 1)
+    }
+
+    function stop() {
+        clearTimeout(sw)
+    }
+</script>

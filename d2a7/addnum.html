@@ -1,0 +1,13 @@
+<form name="math">
+    Num1 <input type="number" name="one"><br>
+    Num2 <input type="number" name="two"><br>
+    Result <input type="number" readonly name="res"><br>
+    <input type="button" onclick="add()" value="Add">
+</form>
+<script>
+    function add() {
+        // document.math.res.value = document.math.one.value + document.math.two.value
+        document.math.res.value = parseInt(document.math.one.value) + parseInt(document.math.two.value)
+    }
+</script>
+

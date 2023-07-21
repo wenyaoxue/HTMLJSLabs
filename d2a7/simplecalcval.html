@@ -1,0 +1,41 @@
+<form name="math">
+    Num1 <input type="text" name="one"><br>
+    Num2 <input type="text" name="two"><br>
+    Result <input type="number" readonly name="res"><br>
+    <input type="button" onclick="add()" value="Add">
+    <input type="button" onclick="sub()" value="Subtract">
+    <input type="button" onclick="mul()" value="Multiply">
+    <input type="button" onclick="div()" value="Divide">
+</form>
+<script>
+    function get1() {
+        num1 = document.math.one.value
+        if (!isFinite(num1)) {
+            alert("Please enter a number (num1)!")
+            return false
+        }
+        return parseInt(num1);
+    }
+    function get2() {
+        num2 = document.math.two.value
+        if (!isFinite(num2)) {
+            alert("Please enter a number (num2)!")
+            return false
+        }
+        return parseInt(num2);
+    }
+    function add() {
+        // document.math.res.value = document.math.one.value + document.math.two.value
+        document.math.res.value = get1() + get2()
+    }
+    function sub() {
+        document.math.res.value = get1() - get2()
+    }
+    function mul() {
+        document.math.res.value = get1() * get2()
+    }
+    function div() {
+        document.math.res.value = get1() / get2()
+    }
+</script>
+

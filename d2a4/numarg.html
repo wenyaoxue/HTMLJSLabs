@@ -1,0 +1,15 @@
+<script>
+    function avg() {
+        let sum = 0
+        document.write("averaging...")
+        for (let i = 0; i < arguments.length; i++) {
+            document.write(arguments[i]+" ")
+            sum += parseInt(arguments[i])
+        }
+        document.write(" -done- ")
+        return sum/arguments.length
+    }
+    document.write(avg(1,3,5,2,3,5)+"<br>")
+    document.write(avg(123,54,23,1,75)+"<br>")
+    document.write(avg(1,6,34,8,2,1,3,7,2,4)+"<br>")
+</script>

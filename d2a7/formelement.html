@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script language="JavaScript">
+            function funDisp() {
+                alert("textbox val is "+document.forms[0].elements[0].value) //Asreet
+                alert("textbox val is "+document.forms[0].elements[1].value) //1
+                alert("textbox val is "+document.forms[0].elements[2].value) //submit
+            }
+        </script>
+    </head>
+    <body>
+        <form name="frm1">
+            <input type="text" name="txt1" value="Asreet"><br>
+            <input type="radio" name="rad1" value="1" checked>Ok<br>
+            <input type="button" value="submit" name="but1" onclick="funDisp()">
+        </form>
+    </body>
+</html>
