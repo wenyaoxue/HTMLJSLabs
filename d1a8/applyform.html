@@ -1,0 +1,54 @@
+<form>
+    <table border="2" cellpadding="20">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="txtname"></td>
+        </tr>
+        <tr>
+            <td>Sex </td>
+            <td><input type="radio" name="sex">male <input type="radio" name="sex">female </td>
+        </tr>
+        <tr>
+            <td>Qualification </td>
+            <td><input type="checkbox">SSLC <input type="checkbox">PUC <br> <input type="checkbox">Graduate <input type="checkbox">Post Graduate </td>
+        </tr>
+        <tr>
+            <td>Email </td>
+            <td><input type="email"> </td>
+        </tr>
+        <tr>
+            <td>Date Of Birth </td>
+            <td><select id="date">
+                <script>
+                    for (let i = 1; i <=31; i++)
+                        document.write("<option>"+i)
+                </script>
+            </select>
+            <select id="month">
+                <script>
+                    let mos = ["Jan", "Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+                    for (let i = 0; i < mos.length; i++)
+                        document.write("<option>"+mos[i])
+                </script>
+            </select>
+            <select id="year">
+                <script>
+                    for (let i = 1900; i < 2024; i++)
+                        document.write("<option>"+i)
+                </script>
+            </select> </td>
+        </tr>
+        <tr>
+            <td>Attach Resume </td>
+            <td><input type="text"><input type="file"> </td>
+        </tr>
+        <tr>
+            <td>Comments </td>
+            <td><textarea rows="3" cols="60"></textarea> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td><input type="submit">  <input type="reset"> </td>
+        </tr>
+    </table>
+</form>

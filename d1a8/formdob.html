@@ -1,0 +1,21 @@
+
+Date of Birth
+<select id="date">
+    <script>
+        for (let i = 1; i <=31; i++)
+            document.write("<option>"+i)
+    </script>
+</select>
+<select id="month">
+    <script>
+        let mos = ["Jan", "Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+        for (let i = 0; i < mos.length; i++)
+            document.write("<option>"+mos[i])
+    </script>
+</select>
+<select id="year">
+    <script>
+        for (let i = 1900; i < 2024; i++)
+            document.write("<option>"+i)
+    </script>
+</select>

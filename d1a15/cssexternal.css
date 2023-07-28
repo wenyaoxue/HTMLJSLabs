@@ -1,0 +1,12 @@
+th {
+    color:red;
+    font:100pt;
+    background-color: cyan;
+    width: 150px;
+}
+.even {
+    background-color: lightgreen;
+}
+.odd {
+    background: yellow;
+}
